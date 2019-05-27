@@ -19,4 +19,5 @@ def create(request):
     blog.body=request.GET['body']
     blog.pub_date=timezone.datetime.now()   # 블로그 작성한 시점 넣어주는 함수
     blog.save()     # 객체를 db에 저장
-    return redirect('/blog/'+str(blog.id))  # str(정수형을 문자형으로 변경), url+문자열  
+    #return redirect('/blog/'+str(blog.id))  # str(정수형을 문자형으로 변경), url+문자열  
+    return redirect('/blog')
