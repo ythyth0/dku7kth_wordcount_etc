@@ -1,0 +1,11 @@
+{% extends 'base.html' %} {% block contents %}
+<body>
+  <div class="container">
+    {% for user in data %}
+    <p>
+      {{ user.name }} : <a href="{{ user.url }}">{{ user.url }}</a>
+    </p>
+    {% endfor %}
+  </div>
+</body>
+{% endblock %}

@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'accounts.apps.AccountsConfig',
     'wordapp.apps.WordappConfig',
     'portfolio.apps.PortfolioConfig',
+    'app_homework_finder.apps.AppHomeworkFinderConfig',
 ]
 
 MIDDLEWARE = [

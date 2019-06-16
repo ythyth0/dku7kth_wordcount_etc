@@ -1,0 +1,46 @@
+{% extends 'base.html' %} {% block contents %}{% load static %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'signup_in.css' %}" />
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css" />
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+<body>
+  <div class="container">
+    <div class="col-md-6 mx-auto text-center">
+      <div class="header-title">
+        검색하기
+        {{ error }}
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-4 mx-auto">
+        <div class="myform form ">
+          <form action="{% url 'complete' %}" method="POST" name="login">
+            {% csrf_token %}
+            <div class="form-group">
+              <input type="text" name="id" class="form-control my-input" placeholder="id" />
+            </div>
+            <div class="form-group">
+              <input type="password" name="password" class="form-control my-input" placeholder="password" />
+            </div>
+            <div class="form-group">
+              <input type="text" min="0" name="univ" class="form-control my-input" placeholder="univ" />
+            </div>
+            <div class="ko_contents" margin="3em">
+              <input type="radio" name="ass_btn" value="5" /> IT 서비스 소개하기<br />
+              <input type="radio" name="ass_btn" value="6" /> wordcount 만들기<br />
+              <input type="radio" name="ass_btn" value="7" /> Blog 배포하기<br />
+              <input type="radio" name="ass_btn" value="8" /> 프로젝트 배포하기<br />
+            </div>
+            <div class="text-center ">
+              <button type="submit" padding="100px" class=" btn btn-block send-button tx-tfm">제출하기</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+{% endblock %}

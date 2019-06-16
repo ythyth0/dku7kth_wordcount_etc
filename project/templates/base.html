@@ -1,4 +1,5 @@
 <head>
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/font-kopub/1.0/kopubdotum.css" />
   <link
     rel="stylesheet"
     href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
@@ -20,6 +21,25 @@
     integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
     crossorigin="anonymous"
   ></script>
+  <style>
+    body > div > div.row > div > div > form > div.ko_contents > input {
+      font-family: 'KoPub Dotum';
+      font-size: 15px;
+      margin: 8px;
+    }
+    body > div > div.row > div > div > form > div.text-center > button {
+      font-family: 'KoPub Dotum';
+      font-size: 15px;
+      margin: 10px;
+    }
+    body > div > div.col-md-6.mx-auto.text-center > div {
+      font-family: 'KoPub Dotum';
+      font-weight: bold;
+      font-size: 30px;
+      margin: 30px;
+      letter-spacing: 3px;
+    }
+  </style>
 </head>
 
 <body>
@@ -80,7 +100,7 @@
             <a class="dropdown-item" href="{% url 'wordhome' %}">Wordcount</a>
             <a class="dropdown-item" href="{% url 'portfolio' %}">Portfolio</a>
             <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="#">blank</a>
+            <a class="dropdown-item" href="{% url 'searching' %}">homework finder</a>
           </div>
         </li>
         <!--
